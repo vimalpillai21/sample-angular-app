@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Vimal Angular App';
+  thanos = 'Avengers End Game';
 }
