@@ -8,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+  allowServerStatus = false;
+  serverCreationStatus = 'Server was not created';
+  serverName = 'James Bond';
+  constructor() {
+    setTimeout(() => {
+      return this.allowServerStatus = true;
+    },2000)
+   }
 
   ngOnInit() {
+  }
+
+  onServerCreate(){
+    this.serverCreationStatus = 'Server Created Successfully';
+  }
+  onCreateServer(event:any){
+    console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 
 }
